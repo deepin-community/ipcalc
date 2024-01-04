@@ -1,5 +1,169 @@
-template-repository (1.0-1) unstable; urgency=medium
+ipcalc (0.51-1) unstable; urgency=medium
 
-  * Initial release
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream version (Closes: #1040986)
+  * Bumpped Standards-Version to 4.6.2 (no changes needed).
+  * Removed now obsolete patch.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 19 Dec 2023 11:44:07 +0100
+
+ipcalc (0.42-2) unstable; urgency=medium
+
+  * Source only upload. 
+
+ -- Bartosz Fenski <fenio@debian.org>  Sun, 12 Jul 2020 16:55:18 +0200
+
+ipcalc (0.42-1) unstable; urgency=low
+
+  * The Akamai Technologies paid volunteer days release.
+  * New release based on github fork.
+  * Bumped DH compatibility level.
+  * Bumped Standards-Version.
+  * Basic support for IPv6 (Closes: #809847).
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 09 Jul 2020 12:13:12 +0200
+
+ipcalc (0.41-5) unstable; urgency=low
+
+  * The Akamai Technologies paid volunteer days release.
+  * Updating to the newest standards of basically everything.
+    Very "cool" experience ;)
+  * CGI script is now optional and put into examples (Closes: #763032) 
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 10 Dec 2015 13:51:12 +0100
+
+ipcalc (0.41-4) unstable; urgency=low
+
+  * The Akamai Technologies paid volunteer days release.
+  * Fixes overzealous input checking (Closes: #332468)
+  * Martin F Krafft removed as co-maintainer (Closes: #719098)
+    + package now uses new copyright format
+  * Bumped Standards-Version (no changes needed)
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 10 Dec 2013 13:05:15 +0100
+
+ipcalc (0.41-3) unstable; urgency=low
+
+  * The Akamai Technologies paid volunteer days release.
+  * ACK previous NMU, thanks Christopher!
+  * Documents some missing features in the manpage (Closes: #588143)
+    Thanks Tanguy Ortolo <tanguy+debian@ortolo.eu>!
+  * Fixes other minor problems in manpage (Closes: #688148)
+  * Description now says it's tool IPv4 only (Closes: #628955)
+  * Fixes lack of </table> tag when printing supernets (Closes: #600251)
+  * The following changes are courtesy of Jari Aalto <jari.aalto@cante.net>:
+    - Remove deprecated dpatch and upgrade to packaging format "3.0 quilt".
+    - Update to Standards-Version to 3.9.3 and debhelper to 9.
+    - Add build-arch and build-indep targets; use dh_prep in rules file.
+    - Patch 03: update with "quilt refresh" to make it apply cleanly. 
+      Thanks to these changes (Closes: #670737)
+
+ -- Bartosz Fenski <fenio@debian.org>  Fri, 21 Dec 2012 12:30:11 +0100
+
+ipcalc (0.41-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Handle cases where $TERM is not set (like in cron) as well (Closes: #547321)
+
+ -- Christoph Egger <christoph@debian.org>  Mon, 12 Mar 2012 19:04:53 +0100
+
+ipcalc (0.41-2) unstable; urgency=low
+
+  * Doesn't activate colours in Emacs (Closes: #479877)
+  * Doesn't refer to nonexistent background file (Closes: #436199)
+  * Manpage doesn't refer to nonexistent --help option (Closes: #522523)
+  * Adjusted output width (Closes: #479956, #479958)
+  * Homepage moved to its header from description.
+  * debian/copyright refers to certain version of GPL.
+  * debian/rules removed DH_COMPAT.
+  * Bumped Standards-Version to 3.8.2 (no changes needed).
+  * Bumped DH compatibility level.
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 14 Jul 2009 14:34:08 +0200
+
+ipcalc (0.41-1) unstable; urgency=low
+
+  * New upstream release.
+    - fixes cross-site scripting (XSS) vulnerability (Closes: #381469)
+      (see CVE-2006-3848 for details)
+  * Bumped needed debhelper version.
+  * Updated Standards-Version to 3.7.2 (no changes needed).
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu,  7 Sep 2006 09:04:48 +0200
+
+ipcalc (0.40-1) unstable; urgency=low
+
+  * New upstream version.
+    - option '-c' should finally work as one day.
+    - includes stylesheet in cgi file.
+  * Patch fixing paths has been fixed to work with new version.
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed, 13 Jul 2005 11:47:32 +0200
+
+ipcalc (0.39-1) unstable; urgency=low
+
+  * New upstream version (Closes: #293918)
+    - has properly working '-c' option again (Closes: #288867)
+    - fixes problems on 64bit archs (Closes: #312991)
+    - includes graphic files (Closes: #288332)
+  * New co-maintainer (myself), thus changes in control file.
+  * Copyright belongs to author and not to GPL license. Fixed.
+    Also extended to include copyright info for graphics.
+  * Added URL to homepage in control file.
+  * We're now using dh_install instead of another Makefile.
+    We also use DH_COMPAT=4 to make dh_fixperms behave more friendly.
+  * Bumped Standards-Version (no changes needed)
+  * ipcalc cgi script is patched with the help of dpatch.
+    Hopefully most webservers will have /images/ alias soon, so we 
+    could use /usr/share/images/ipcalc for graphics.
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu,  7 Jul 2005 11:37:36 +0200
+  
+ipcalc (0.37-1) unstable; urgency=low
+
+  * New upstream release (closes: Bug#248872)
+    Please see the note in README.Debian if you are using the CGI.
+  * Updated the Standards-Version to 3.6.1 to conform with Debian Policy (no
+    other changes though).
+
+ -- martin f. krafft <madduck@debian.org>  Thu, 20 May 2004 02:26:42 +0200
+
+ipcalc (0.35-3) unstable; urgency=low
+
+  * Corrected wrong path in ipcalc_cgi (closes: Bug#179471).
+  * Moved ipcalc_cgi to /usr/lib/cgi-bin/ipcalc
+  * Updated the Standards-Version to 3.5.9 to conform with Debian Policy (no
+    other changes though).
+  * Included manpages by Nick Clifford <zaf@nrc.co.nz>. Thanks!
+
+ -- martin f. krafft <madduck@debian.org>  Sun, 26 Jan 2003 20:45:22 +0100
+
+ipcalc (0.35-2) unstable; urgency=low
+
+  * Updated the Standards-Version to 3.5.8 to conform with Debian Policy.
+
+ -- martin f. krafft <madduck@debian.org>  Wed,  4 Dec 2002 10:52:38 +0100
+
+ipcalc (0.35-1) unstable; urgency=low
+
+  * Corrected the missing Debian version number.
+
+ -- martin f. krafft <madduck@debian.org>  Sun,  8 Sep 2002 18:35:25 +0200
+
+ipcalc (0.35) unstable; urgency=low
+
+  * New upstream release.
+
+ -- martin f. krafft <madduck@debian.org>  Sun,  8 Sep 2002 18:35:03 +0200
+
+ipcalc (0.34-2) unstable; urgency=low
+
+  * Updated the credits in various places.
+
+ -- martin f. krafft <madduck@debian.org>  Thu, 16 May 2002 18:00:26 +0200
+
+ipcalc (0.34-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- martin f. krafft <madduck@debian.org>  Fri, 14 Sep 2001 20:24:21 +0200
